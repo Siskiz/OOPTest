@@ -6,6 +6,11 @@ public class Employee {
     private int age;
     private int workExperience;
 
+    /**
+     *
+     * @param specialization - I think, the best idea create enum
+     * @param familyStatus - and here
+     */
     public Employee(Specialization specialization, FamilyStatus familyStatus, String position, int age, int workExperience) {
         this.specialization = specialization;
         this.familyStatus = familyStatus;
