@@ -1,4 +1,6 @@
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface OpenCloseBD {
@@ -11,8 +13,10 @@ public interface OpenCloseBD {
      */
     public static List<Employee> startWork(File bd, List<Employee> employeeList) throws InterruptedException {
 //        Start function message
-//        LocalDateTime time = LocalDateTime.now();
-//        System.out.println("Time start work - " + time);
+        LocalDateTime time = LocalDateTime.now();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String timeWithFormat = format.format(time);
+//        System.out.println("Time start work - " + timeWithFormat);
 
 
 
@@ -31,8 +35,10 @@ public interface OpenCloseBD {
      */
     public static List<Employee> endWork(List<Employee> bd, List<Employee> buffer) throws InterruptedException {
 //        Start function message
-//        LocalDateTime time = LocalDateTime.now();
-//        System.out.println("Time start work - " + time);
+        LocalDateTime time = LocalDateTime.now();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String timeWithFormat = format.format(time);
+//        System.out.println("Time end work - " + timeWithFormat);
 
 
 
