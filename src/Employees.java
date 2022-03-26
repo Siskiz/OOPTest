@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
-public class Employees {
+public class Employees implements OpenCloseBD {
 
-    private static ArrayList<Employee> employeesArrayList = new ArrayList<>();
+    static ArrayList<Employee> employeesArrayList = new ArrayList<>();
     public static int countEmployee;
 
     public static void addEmployee(Employee employee) {
@@ -28,6 +28,7 @@ public class Employees {
             System.out.println();
         }
     }
+
 
 
 }
