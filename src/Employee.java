@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Employee {
 
     private Specialization specialization;
@@ -60,5 +62,20 @@ public class Employee {
         System.out.println("My position - " + employee.getPosition());
         System.out.printf("I'm %d age old and my workExperience %d year", employee.getAge(), employee.getWorkExperience());
         System.out.println();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return age == employee.age && workExperience == employee.workExperience
+                && specialization == employee.specialization && familyStatus == employee.familyStatus
+                && position.equals(employee.position);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(specialization, familyStatus, position, age, workExperience);
     }
 }
