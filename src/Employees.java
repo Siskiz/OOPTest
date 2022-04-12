@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class Employees implements OpenCloseBD {
 
+
+
     static ArrayList<Employee> employeesArrayList = new ArrayList<>();
-    public static int countEmployee;
 
     public static void addEmployee(Employee employee) {
         employeesArrayList.add(employee);
-        countEmployee++;
     }
 
     public static ArrayList<Employee> getEmployeesList() {
@@ -28,7 +28,5 @@ public class Employees implements OpenCloseBD {
             System.out.println();
         }
     }
-
-
 
 }

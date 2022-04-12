@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Employee {
@@ -19,6 +20,14 @@ public class Employee {
         this.position = position;
         this.age = age;
         this.workExperience = workExperience;
+    }
+    public Employee(String[] fieldsEmployee) {
+        specialization = Specialization.valueOf(fieldsEmployee[0]);
+        familyStatus = FamilyStatus.valueOf(fieldsEmployee[1]);
+        position = fieldsEmployee[2];
+        age = Integer.parseInt(fieldsEmployee[3]);
+        workExperience = Integer.parseInt(fieldsEmployee[4]);
+
     }
 
     void setSpecialization (Specialization specialization) {
@@ -78,4 +87,15 @@ public class Employee {
     public int hashCode() {
         return Objects.hash(specialization, familyStatus, position, age, workExperience);
     }
+
+    public static ArrayList<String> changeEmployeeInString(ArrayList<Employee> endList) {
+        ArrayList<String> endArrayList = new ArrayList<>();
+        for (Employee employee : endList) {
+            String fieldsEmployee = "" + employee.specialization + " " + employee.familyStatus
+                    + employee.position + employee.age + employee.workExperience;
+            endArrayList.add(fieldsEmployee);
+        }
+        return endArrayList;
+    }
+
 }
