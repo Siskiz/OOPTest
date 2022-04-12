@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 
-public class Employees implements OpenCloseBD {
-
-
+public class Employees {
 
     static ArrayList<Employee> employeesArrayList = new ArrayList<>();
 

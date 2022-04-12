@@ -91,8 +91,8 @@ public class Employee {
     public static ArrayList<String> changeEmployeeInString(ArrayList<Employee> endList) {
         ArrayList<String> endArrayList = new ArrayList<>();
         for (Employee employee : endList) {
-            String fieldsEmployee = "" + employee.specialization + " " + employee.familyStatus
-                    + employee.position + employee.age + employee.workExperience;
+            String fieldsEmployee = "" + employee.specialization + " " + employee.familyStatus + " "
+                    + employee.position + " " + employee.age + " " + employee.workExperience;
             endArrayList.add(fieldsEmployee);
         }
         return endArrayList;
