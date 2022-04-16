@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +16,8 @@ public interface OpenCloseBD {
      */
     static void startWork(ArrayList<Employee> employeeList) throws IOException, InterruptedException {
         //Start function message
-        LocalDateTime time = LocalDateTime.now();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMMM-dd-yyyy HH:mm:ss");
+        String time = dtf.format(LocalDateTime.now());
         System.out.println("Time start work - " + time);
 
         System.out.println("Copy file in buffer");
@@ -50,9 +52,8 @@ public interface OpenCloseBD {
      */
     static void endWork(ArrayList<Employee> employees) throws InterruptedException, IOException {
         //Start function message
-        LocalDateTime time = LocalDateTime.now();
-//        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        String timeWithFormat = format.format(time);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMMM-dd-yyyy HH:mm:ss");
+        String time = dtf.format(LocalDateTime.now());
         System.out.println("Time end work - " + time);
 
         ArrayList<String> endArrayList = Employee.changeEmployeeInString(employees);
