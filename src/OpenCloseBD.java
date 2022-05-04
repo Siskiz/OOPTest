@@ -6,10 +6,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-public interface OpenCloseBD {
+public abstract class OpenCloseBD {
 
-    Path bd = Path.of("C:\\OOPTest\\bd.txt");
-    Path copyBD = Path.of("C:\\OOPTest\\buffer.txt");
+    static Path bd = Path.of("C:\\OOPTest\\bd.txt");
+    static Path copyBD = Path.of("C:\\OOPTest\\buffer.txt");
 
     /*
     This I will want to create function. It starts work, copy file in buffer

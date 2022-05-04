@@ -1,15 +1,15 @@
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Test {
+public class Test extends OpenCloseBD{
 
     static ArrayList<Employee> employees = new ArrayList<>();
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        OpenCloseBD.startWork(employees);
+        startWork(employees);
 
-        OpenCloseBD.endWork(Employees.employeesArrayList);
+        endWork(Employees.employeesArrayList);
 
     }
 
